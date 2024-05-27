@@ -1,29 +1,45 @@
 ﻿using System;
-namespace Virtualpet
+namespace VirtualPet
 {
     class Program
 
     {
         static void Main(string[] args)
         {
-
-
-            Console.WriteLine("Welcome to Virtual Pet Simulator!");
-            Console.WriteLine("Please choose a type of pet:");
-            Console.WriteLine("Cat");
-            Console.WriteLine("Dog");
-            Console.WriteLine("Rabbit");
-
-            string petType = Console.ReadLine();
-
-            Console.WriteLine("You have choosen a" + " " + petType + "." + " " + "What would you like to name your pet?");
-
-            string petName = Console.ReadLine();
-
-            Console.WriteLine("Welcome," + " " + petName + "!");
             int hunger = 5;
             int happiness = 5;
             int health = 5;
+            string petType = "";
+            string petName = "";
+
+            Console.WriteLine("Welcome to Virtual Pet Simulator!");
+            Console.WriteLine("Please choose a type of pet:");
+            Console.WriteLine("1. Cat");
+            Console.WriteLine("2. Dog");
+            Console.WriteLine("3. Rabbit");
+
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    petType = "Cat";
+                    break;
+                    case "2":
+                    petType = "Dog";
+                    break;
+                    case "3":
+                    petType = "Rabbit";
+                    break;
+                    default:
+                    Console.WriteLine("Invalid Option.");
+                    return;
+            }
+
+            Console.WriteLine("You have choosen a" + " " + petType + "." + " " + "What would you like to name your pet?");
+
+             petName = Console.ReadLine();
+
+            Console.WriteLine("Welcome," + " " + petName + "!");
 
             bool exit = false;
 
@@ -36,6 +52,12 @@ namespace Virtualpet
                 Console.WriteLine("4. Check" + " " + petName + "'s" + " " + "status");
                 Console.WriteLine("5. Exit");
                 string choice= Console.ReadLine();
+                switch (choice)
+                {
+                    case "1":
+                        Console.WriteLine("You fed" + " " + petName + ".");
+
+                }
             }
            
         }
