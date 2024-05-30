@@ -1,6 +1,6 @@
 # Virtual Pet Simulator
 
-Project Description:
+PROJECT DESCRIPTION:
 
 Virtual pet simulator is a basic console application in C# developed to take care of a pet. The detailed features of this project includes
 
@@ -17,3 +17,27 @@ Virtual pet simulator is a basic console application in C# developed to take car
 3. And also there is a feature to check the status of the pet on a scale of 1 to 10 according to the current condition of the pet.
 
    Each action will modify the status of the pet accordingly and also displays the message showing each action's effect.
+
+SETUP INSTRUCTIONS:
+
+To run this application, there should be Visual Studio installed in your system. After installation, the steps is as follows:
+
+ 1. Open the visual studio application.
+    
+ 2. Select open a project or solution and select the virtual pet simulator project.
+
+ 3. Build and run the application.
+
+ 4. After running the application, in the output window there will be a welcome message and will ask to choose a pet type and name them.
+
+ 5. Then, we will be able to see the main menu options where we can feed the pet, play with them, put them to rest and also the status of the pet
+
+ 6. Select each option and also select the status to see the current status of the pet for each actions.
+
+ 7. And after going through each options, there will be an option to exit, which will display a thank you message for using virtual pet simulator.
+   
+
+   
+
+
+   
