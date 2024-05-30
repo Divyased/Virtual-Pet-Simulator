@@ -6,6 +6,7 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
+            //status of the pet
             int hunger = 5;
             int happiness = 8;
             int health = 6;
@@ -48,6 +49,7 @@ namespace VirtualPet
 
             Console.WriteLine("\nGreat!" + " " + "You have created a" + " " + petType + " "+ "named" + " " + petName);
 
+            // interaction loop
             bool exit = false;
 
             while(!exit)
@@ -66,29 +68,30 @@ namespace VirtualPet
                 switch (choice)
                 {
                     case "1":
+                        //feeding the pet
                         hunger -= 2;
-                        //if (hunger < 0)hunger = 0;
                         health++;
                         Console.WriteLine("\nYou fed" + " " + petName + "." + " " + "Hunger decreases, and health improves slightly.");
                         break;
 
                         case "2":
-                        happiness += 2;
-                        //if(happiness > 10)happiness = 10;
+                        //playing with the pet
+                        happiness += 2;                       
                         hunger++;
                         if (hunger > 10) hunger = 10;
                         Console.WriteLine("\nYou played with" + " " + petName+ "." +" "+  "Happiness increases and" + " " + petName + " "+ "is bit hungry.");
                         break;
 
                         case "3":
-                        health += 2;
-                        //if (health > 10) health = 10;
+                        //letting the pet rest
+                        health += 2;                        
                         happiness--;
                         if(happiness < 0)happiness=0;
                         Console.WriteLine("\nYou let" + " " + petName + " " + "rest." + " " +"Health improves and happiness decreases slightly.");
                         break;
 
                         case "4":
+                        //checking status of the pet
                         Console.WriteLine("\n");
                         Console.WriteLine(petName + "'s" + " " + "status is");
                         Console.WriteLine("Hunger:" + hunger);
@@ -103,7 +106,7 @@ namespace VirtualPet
                         default:
                         Console.WriteLine("\nInvalid choice");
                         break;
-
+                        
                 }
             }
             Console.WriteLine("\nThank You for playing with"+ " " + petName + "" + "!"); 
